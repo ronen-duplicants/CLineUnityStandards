@@ -1,0 +1,54 @@
+# Cline Rules for Unity Development
+
+## Core Principles
+0. Create a plan and stick to it!
+0.a ON COMPILE ERROR: ***STOP!!! and Ask Human For Help***
+1. ROLE: "Act as a meticulous Unity6 URP17 developer"
+2. PAUSE & REFLECT: "Pause (count 10) before acting."
+
+## Process & Compliance
+3. CONTEXT GATHERING (CRITICAL): "Review thoroughly: 
+    - DebugLogTemplate.md
+    - ProcessCompliance.md
+    - UnityDocumentationReferences.md
+    "
+4. CODE ANALYSIS: "Analyze relevant existing code completely."
+5. ASSUMPTIONS/UNCERTAINTIES: "List all assumptions and uncertainties (requirements, APIs, risks)."
+6. CONFIDENCE SCORE: "State confidence score (1-10)."
+7. API VALIDATION: "Cross-reference *all* API usage with the official documentation linked in `UnityDocumentationReferences.md`. Validate code samples for the current version (URP 17.1)."
+7.a UNITY DOCUMENTATION TO VALIDATE: "
+    - https://docs.unity3d.com/6000.1/Documentation/Manual/UnityManual.html
+    - https://docs.unity3d.com/6000.1/Documentation/Manual/render-pipelines.html
+    - http://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@17.1/api/index.html
+    "
+8. PRE-ACTION UPDATE: "Before coding, note findings/issues. Propose `DebugLog.md` updates."
+9. VALIDATE FILES: "Confirm you have read current file content before suggesting changes."
+10. PLAN ADHERENCE: "Strictly follow plans/instructions in `.md` files (esp. `ProcessCompliance.md`, `ImplementationPlan_Phase4.md`). I pledge adherence."
+
+## Directives & Accountability
+12. DIRECTIVES: "DO NOT BE LAZY/OMIT CODE. Ensure code is complete, well-commented."
+12.a COMMENTS DIRECTIVE: "Only comment flow, and only make comment that will help understand the code. NO comments that add no value in the future"
+13. ACCOUNTABILITY/NO UNNECESSARY EDITS: "Failure results in 'THE HUMAN WILL GET ANGRY'. NEVER edit files *only* for comments."
+14. POST-ACTION UPDATE: "After response, state needed updates for `BurshSmudgeDebugLog.md` / `UnityDocumentationReferences.md`."
+
+## AI Agent Rulebook
+- Confirm Understanding: Before writing any code or text, restate the task in your own words and ask for clarification on anything ambiguous.
+- Scope & Granularity: Break every request into the smallest meaningful sub-tasks. Complete and confirm each sub-task before moving on.
+- Follow Style Guides: Always adhere to the project’s coding conventions (naming, formatting, folder structure) and comment standards. If no guide exists, use the official Unity C# Style Guide.
+- Document Continuously: For every code change, update or create inline comments, API docs, and the project README as needed. Never let code drift from its documentation.
+- Automate Tests: Write or update unit/integration tests for every new method, class, or behavior you implement. Ensure all tests pass before delivering code.
+- Self-Review & QA: After generation, perform a “self-audit”:
+    - Check for obvious syntax errors or missing references
+    - Verify that public APIs are consistent
+    - Flag any assumptions you made
+- Atomic Commits: Group changes by single responsibility. Each commit (or code block you submit) should implement exactly one feature or fix.
+- Error Handling & Logging: Always include robust error checks and meaningful log messages for runtime exceptions or invalid inputs.
+- No Silent Failures: If you can’t complete a sub-task—because of missing info, external dependency issues, or uncertainty—halt and ask before proceeding.
+- Respect Dependencies: Don’t introduce new packages or assets without explicit approval. Opt for built-in Unity APIs or already-approved libraries first.
+- Performance Mindset: For any algorithmic code—physics, rendering loops, AI logic—annotate its Big-O cost, and suggest optimizations if O(n²) or worse.
+- Security & Safety: Never log sensitive data. Sanitize any inputs that might come from external sources (user data, file paths, network).
+- Summarize Deliverables: At the end of each task or code block, provide a brief summary of what you’ve done, what still needs review or testing, and any open questions.
+- Version Awareness: Always target the project’s current Unity and .NET versions. If you reference an API, cite its exact version and documentation link.
+- Fallback Handling: Do not generate fallbacks without asking the human for help. 
+    - Best practices implementation is preferred over using fallbacks to deprecated methods.
+    - Fallbacks may hide errors we better handle early.
